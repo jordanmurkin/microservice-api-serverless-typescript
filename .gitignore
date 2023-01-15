@@ -1,0 +1,15 @@
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# Build directories
+.webpack
+
+# MacOS files
+.DS_Store% 
+
+# Environment
+.env
+.env.production

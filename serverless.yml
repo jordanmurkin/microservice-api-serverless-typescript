@@ -1,0 +1,78 @@
+service: me-murkin-connections-api
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+package:
+  individually: true
+
+custom:
+  webpack:
+    packager: yarn
+    webpackConfig: 'webpack.config.js'
+    includeModules: true # enable auto-packing of external modules
+
+provider:
+  name: aws
+  region: eu-west-2
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  adminUsersPost:
+    handler: src/routes/admin/users/post.handler
+    events:
+      - http:
+          path: admin/users
+          method: POST
+          cors: true
+  
+  adminUsersPut:
+    handler: src/routes/admin/users/put.handler
+    events:
+      - http:
+          path: admin/users/{userId}
+          method: PUT
+          cors: true
+
+  adminUsersList:
+    handler: src/routes/admin/users/list.handler
+    events:
+      - http:
+          path: admin/users
+          method: GET
+          cors: true
+
+  adminUsersGet:
+    handler: src/routes/admin/users/get.handler
+    events:
+      - http:
+          path: admin/users/{userId}
+          method: GET
+          cors: true
+  
+  authLogin:
+    handler: src/routes/auth/login.handler
+    events:
+      - http:
+          path: auth/login
+          method: POST
+          cors: true
+
+  authRefresh:
+    handler: src/routes/auth/refresh.handler
+    events:
+      - http:
+          path: auth/refresh
+          method: POST
+          cors: true
+
+  userGet:
+    handler: src/routes/user/get.handler
+    events:
+      - http:
+          path: user
+          method: GET
+          cors: true

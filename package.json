@@ -1,0 +1,40 @@
+{
+  "name": "microservice-api-typescript-template",
+  "version": "1.0.0",
+  "description": "A template microservice API using TypeScript",
+  "dependencies": {
+    "@altostra/type-validations": "^2.6.1",
+    "@types/aws-lambda": "^8.10.93",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.1",
+    "has": "^1.0.3",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^2.3.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "serverless": "^3.26.0",
+    "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-offline": "^12.0.4",
+    "serverless-webpack": "^5.11.0",
+    "ts-loader": "^9.2.7",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "author": "Jordan Murkin",
+  "license": "MIT"
+}
