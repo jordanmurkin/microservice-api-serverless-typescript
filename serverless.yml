@@ -1,4 +1,4 @@
-service: me-murkin-connections-api
+service: microservice-api-typescript-template
 
 plugins:
   - serverless-webpack
